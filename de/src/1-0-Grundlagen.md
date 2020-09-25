@@ -1,4 +1,4 @@
-# Grundlagen
+# Basics
 
 Wir stehen vor enormen Herausforderungen, die durch Globalisierung,
 Digitalisierung sowie schnelle technologische und wissenschaftliche
