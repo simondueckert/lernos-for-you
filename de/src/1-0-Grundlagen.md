@@ -25,3 +25,8 @@ Vernetzung mit anderen Menschen, damit du nicht jedes Rad neu
 erfinden und jeden Fehler wiederholen musst.
 
 Und das Beste ist: lernOS ist frei, offen und leicht zu verstehen. Starte heute damit!
+
+## Noch mehr Basics
+
+* Erstens
+* Zweitens
