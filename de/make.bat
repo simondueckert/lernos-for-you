@@ -22,7 +22,7 @@ pandoc metadata.yaml -s --resource-path="./src" --toc %chapters% -o %filename%.h
 
 REM Create Web Version (mkdocs)
 echo Creating Web Version ...
-mkdocs build
+python -m mkdocs build
 
 REM Create PDF Version (pdf)
 echo Creating PDF version ...
@@ -30,11 +30,11 @@ pandoc metadata.yaml --from markdown --resource-path="./src" --template lernOS -
 
 REM Create eBook Versions (epub, mobi)
 REM echo Creating eBook versions ...
-REM magick -density 300 %filename%.pdf[0] src/images/ebook-cover.jpg
-REM magick mogrify -size 2500x2500 -resize 2500x2500 src/images/ebook-cover.jpg
-REM magick mogrify -crop 1563x2500+102+0 src/images/ebook-cover.jpg
-REM pandoc metadata.yaml -s --resource-path="./src" --epub-cover-image=src/images/ebook-cover.jpg %chapters% -o %filename%.epub
-REM ebook-convert %filename%.epub %filename%.mobi
+magick -density 300 %filename%.pdf[0] src/images/ebook-cover.jpg
+magick mogrify -size 2500x2500 -resize 2500x2500 src/images/ebook-cover.jpg
+magick mogrify -crop 1563x2500+102+0 src/images/ebook-cover.jpg
+pandoc metadata.yaml -s --resource-path="./src" --epub-cover-image=src/images/ebook-cover.jpg %chapters% -o %filename%.epub
+ebook-convert %filename%.epub %filename%.mobi
 
 
 echo Done. Check for error messages or warnings above. 
